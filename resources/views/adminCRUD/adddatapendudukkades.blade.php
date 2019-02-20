@@ -21,7 +21,7 @@
           <input type="text" name="Alamat" placeholder="Alamat"><br><br>
           Dusun :<br>
           <select name="Id_Dusun">
-                 <option selected="true" >Dusun</option>
+                 <option selected="true" disabled="disabledS">Dusun</option>
                  @foreach ($kode_area_dusuns as $kode_area_dusun)
                     <option value="{{ $kode_area_dusun->id_dusun }}">{{ $kode_area_dusun->Nama_Dusun }}</option>
                  @endforeach
