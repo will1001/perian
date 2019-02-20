@@ -1,7 +1,7 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="container registerform">
+<div class="container loginregform registerform">
     <div class="row justify-content-center">
         <div class="col-md-8">
             <div class="card">
@@ -94,9 +94,7 @@
                         </div>
                     </form>
                 </div>
-                @if ($errors->any())
-        <h3 class="text-center text-danger">{{ implode('', $errors->all(':message')) }}</h3>
-        @endif
+                <p class="text-center text-danger">{{ session('pesan') }}</p>
             </div>
         </div>
     </div>
