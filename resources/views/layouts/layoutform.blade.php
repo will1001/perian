@@ -3,13 +3,27 @@
   <head>
     <!-- Required meta tags -->
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
-
-    <!-- Bootstrap CSS -->
-    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/style.css')}}">
+    <meta name="author" content="John Doe">
+    <meta name="description" content="">
+    <meta name="keywords" content="HTML,CSS,XML,JavaScript">
+    <meta http-equiv="x-ua-compatible" content="ie=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Title -->
+    <title>Desa Perian</title>
+    <!-- Place favicon.ico in the root directory -->
+    <link rel="apple-touch-icon" href="{{asset('images/apple-touch-icon.png')}}">
+    <link rel="shortcut icon" type="image/ico" href="{{asset('images/favicon.ico')}}" />
+    <!-- Plugin-CSS -->
+    <link rel="stylesheet" href="{{asset('css/bootstrap.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/owl.carousel.min.css')}}">
+    <link rel="stylesheet" href="{{asset('css/themify-icons.css')}}">
+    <link rel="stylesheet" href="{{asset('css/magnific-popup.css')}}">
+    <link rel="stylesheet" href="{{asset('css/animate.css')}}">
+    <!-- Main-Stylesheets -->
+    <link rel="stylesheet" href="{{asset('css/normalize.css')}}">
+    <link rel="stylesheet" href="{{asset('css/style.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/admin.css')}}">
-    <link rel="stylesheet" type="text/css" href="{{asset('css/responsive.css')}}">
+    <link rel="stylesheet" type="text/css" href="{{asset('css/responsiveform.css')}}">
     <link rel="stylesheet" type="text/css" href="{{asset('css/animate.css')}}">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
 
@@ -31,7 +45,7 @@
                     <span class="icon-bar"></span>
                 </button>
                 <a href="{{url('/')}}" class="navbar-brand logo">
-                  <img id="logo" src="images/kabupaten-lombok-timur-ntb (1).png" alt="">
+                  <img id="logo" src="/images/kabupaten-lombok-timur-ntb (1).png" alt="">
                     <h5><strong>Website Resmi Pemerintah</strong></h5>
                     <h2>Desa Perian</h2>
                 </a>
@@ -48,7 +62,7 @@
                            
                           <li class="nav-item dropdown">
                                <a id="navbarDropdown" class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false" v-pre>
-                                  {{ Auth::user()->Name }} <span class="caret"></span>
+                                  {{ Auth::user()->name }} <span class="caret"></span>
                               </a>
 
                               <div class="dropdown-menu dropdown-menu-right" aria-labelledby="navbarDropdown">
