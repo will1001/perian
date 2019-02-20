@@ -1938,7 +1938,7 @@ public function adddatapendudukkadus(Request $request)
             
             
             $validator = Validator::make(request()->all(), [
-                'NIK'=> 'required',
+                'NIK','Id_Dusun'=> 'required',
                 
             ]);
             if ($validator->fails()) {
