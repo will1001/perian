@@ -105,7 +105,7 @@
           Akta Lahir :<br>
           <select name="Akta_Lahir">
             <option value="0" selected="true" >Akta Lahir</option>                 
-                @foreach ($kode_data_cakta_lahirs as $kode_data_cakta_lahir)
+                @foreach ($kode_data_akta_lahirs as $kode_data_akta_lahir)
                     <option value="{{ $kode_data_akta_lahir->id }}">{{ $kode_data_akta_lahir->akta_lahir }}</option>
                  @endforeach
           </select><br><br>
