@@ -105,8 +105,8 @@
           <div class="col-md-4">
           Akta Lahir :<br>
           <select name="Akta_Lahir">
-            <option value="{{$data_penduduks[0]->Akta_Lahir}}" selected="true" >{{$data_penduduks[0]->Akta_Lahir}}</option>                 
-                @foreach ($kode_data_akta_lahirs as $kode_data_cakta_lahir)
+            <option value="{{$data_penduduks[0]->Akta_Lahir_defaults}}" selected="true" >{{$data_penduduks[0]->Akta_Lahir_defaults}}</option>                 
+                @foreach ($kode_data_akta_lahirs as $kode_data_akta_lahir)
                     <option value="{{ $kode_data_akta_lahir->id }}">{{ $kode_data_akta_lahir->akta_lahir }}</option>
                  @endforeach
           </select><br><br>
