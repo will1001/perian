@@ -220,7 +220,26 @@
                   <th>Cara KB</th> 
                   <th>Hamil</th> 
                   <th>Status kependudukan</th> 
-                  <th>Keterangan</th>  
+                  <th>Keterangan</th>
+                  <th rowspan="2">Tempat Mendapatkan Air Bersih</th>  
+                  <th rowspan="2">Status Gizi Balita</th>  
+                  <th rowspan="2">Kebiasaan Berobat Bila Sakit</th>   
+                  <!-- <th colspan="5">Pendapatan Perkapita</th>    -->
+                  <!-- <th colspan="5">Pendapatan Rill Keluarga</th>    -->
+                  <th rowspan="2">Jumlah Penghasilan Perbulan</th>   
+                  <th rowspan="2">Jumlah Pengeluaran Perbulan</th>   
+                  <th rowspan="2">Sumber Air Minum</th>   
+                  <th rowspan="2">Kualitas Air Minum</th>   
+                  <th rowspan="2">Kualitas Ibu Hamil</th>   
+                  <th rowspan="2">Kualitas Bayi</th>   
+                  <th rowspan="2">Tempat Persalinan</th>   
+                  <th rowspan="2">Portolongan Persalinan</th>   
+                  <th rowspan="2">Cakupan Imunisasi</th>   
+                  <th rowspan="2">Perilaku Hidup Bersih</th>   
+                  <th rowspan="2">Pola Makan</th>
+                  <th rowspan="2">Penyakit yang di derita</th>
+                  <th rowspan="2">Foto KTP</th>  
+                  <th rowspan="2">Foto KK</th>         
                   <th>edit</th> 
                   <th>hapus</th> 
         </tr>
@@ -375,39 +394,46 @@
 
 
 
-    <section id="profildesaadmin" class="section-padding">
+     <section id="profildesaadmin" class="section-padding">
       <div class="container">
-         <h2>SOTK</h2>
-         @if ($errors->any())
-        <h3 class="text-center text-danger">{{ implode('', $errors->all(':message')) }}</h3>
-        @endif
-        {{-- <div class="row">
-           <div class="col-md-12">
-           
-            <form action="{{ url('editdeskripsiprofildesa') }}" method="post" enctype="multipart/form-data" style="padding-top: 1px;">
-                {{ csrf_field() }}
-                <textarea  rows="10" name="deskripsiprofildesa">{{ $SOTKs[0]->desripsiprofildesa }}</textarea>
-                <input class="button white" type="submit" value="Edit" id="edutbuttondeskripsi">
-              </form>
-
-            </div>
-          </div> --}}
-          <div class="row text-center">
-
-
-            @foreach($SOTKs as $SOTK)
-           <div class="col-12 col-xs-12 col-sm-12 col-md-3">
-            <img src="{{ $SOTK->urlgambar }}" alt="">
-            <h1 class="text-center" >{{ $SOTK->Nama }}</h1>
-            <h3 class="text-center">{{ $SOTK->Jabatan }}</h3>
-            <a href="{{url('formeditSOTK/'.$SOTK->id)}}">Ganti</a>
-            </div>
-            @endforeach
-
-       
-
+        <div class="text-center">
+           <h2>SOTK</h2>
+         </div>
+        <div class="row">
+          <div class="col-md-12">
+            <div style="overflow: auto;max-height: 400px;position: relative;  ">
+                <table id="tabeldatakadus">
+                <thead>
+                  <col width="1000px">
+                  <col width="1000px">
+                  <col width="1000px">
+                  <col width="1000px">
+                  <tr>
+                    <th>Nama</th>
+                    <th>Jabatan</th>
+                    <th>Foto</th>
+                    <th>edit</th> 
+                    <th>hapus</th> 
+                  </tr>
+                </thead>
+                 <tbody>
+                  @foreach($SOTKs as $SOTK)
+                    <tr>
+                      <td>{{ $SOTK->Nama }}</td>
+                      <td>{{ $SOTK->Jabatan }}</td>
+                      <td><a href="{{ $SOTK->urlgambar }}">Lihat</a></td>
+                      <td><a href={{ url('formeditSOTK/' .  $SOTK->id ) }}>edit</a></td>
+                      <td><a href={{ url('deleteSOTK/' .  $SOTK->id ) }}>hapus</a></td>
+                    </tr>
+                  @endforeach
+                </tbody>
+              </table>
+          </div>
+                <a href="{{url('formaddSOTK')}}" class="tomboladd">Tambah Data</a>                      
+                
           </div>
         </div>
+      </div>
     </section>
 
 
@@ -522,7 +548,10 @@
 
 
     <!--Vendor-JS-->
-    <script src="{{asset('js/vendor/jquery-1.12.4.min.js')}}"></script>
+      <script src="https://code.jquery.com/jquery-3.3.1.slim.min.js" integrity="sha384-q8i/X+965DzO0rT7abK41JStQIAqVgRVzpbzo5smXKp4YfRvH+8abtTE1Pi6jizo" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.3/umd/popper.min.js" integrity="sha384-ZMP7rVo3mIykV+2+9J3UJ46jBk0WLaUAdn689aCwoqbBJiSnjAK/l8WvCWPIPm49" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/js/bootstrap.min.js" integrity="sha384-ChfqqxuZUCnJSK3+MXmPNIyE6ZbWh2IMqE241rYiqJxyMiZ6OW/JmZQ5stwEULTy" crossorigin="anonymous"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
     <script src="{{asset('js/vendor/bootstrap.min.js')}}"></script>
     <!--Plugin-JS-->
     <script src="{{asset('js/owl.carousel.min.js')}}"></script>
