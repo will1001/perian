@@ -104,7 +104,12 @@
            </div>
           <div class="col-md-4">
           Akta Lahir :<br>
-          <input type="text" name="Akta_Lahir" value="{{$data_penduduks[0]->Akta_Lahir}}"><br><br>
+          <select name="Akta_Lahir">
+            <option value="{{$data_penduduks[0]->Akta_Lahir}}" selected="true" >{{$data_penduduks[0]->Akta_Lahir}}</option>                 
+                @foreach ($kode_data_akta_lahirs as $kode_data_cakta_lahir)
+                    <option value="{{ $kode_data_akta_lahir->id }}">{{ $kode_data_akta_lahir->akta_lahir }}</option>
+                 @endforeach
+          </select><br><br>
           Nomor Dokumen Paspor :<br>
           <input type="text" name="No_Paspor" value="{{$data_penduduks[0]->No_Paspor}}"><br><br>
           Tanggal akhir Paspor :<br>
@@ -123,19 +128,19 @@
           <input type="text" name="No_Akta_Perceraian" value="{{$data_penduduks[0]->No_Akta_Perceraian}}"><br><br>
           Tanggal Perceraian :<br>
           <input type="date" name="Tanggal_Perceraian" value="{{date('Y-m-d', strtotime($data_penduduks[0]->Tanggal_Perceraian))}}"><br><br>
-          Cacat :<br>
-          <input type="text" name="Cacat" value="{{$data_penduduks[0]->Cacat}}"><br><br>
-          Cara KB :<br>     
+          <select name="Cacat">
+            <option value="{{$data_penduduks[0]->Cacat}}" selected="true" >{{$data_penduduks[0]->Cacat}}</option>                 
+                @foreach ($kode_data_cacats as $kode_data_cacat)
+                    <option value="{{ $kode_data_cacat->id }}">{{ $kode_data_cacat->cacat }}</option>
+                 @endforeach
+          </select><br><br>
+          Cara KB :<br>
           <select name="Cara_KB">
-            <option selected="true" value="{{$data_penduduks[0]->Cara_KB}}">{{$data_penduduks[0]->Cara_KB}}</option>
-              <option value="Pil">Pil</option>
-              <option value="IUD">IUD</option>
-              <option value="Suntik">Suntik</option>
-              <option value="Kondom">Kondom</option>
-              <option value="Susuk KB">Susuk KB</option>
-              <option value="Sterilisasi Wanita">Sterilisasi Wanita</option>
-              <option value="Sterilisasi Pria">Sterilisasi Pria</option>
-               </select><br><br>
+            <option value="{{$data_penduduks[0]->Cara_KB}}" selected="true" >{{$data_penduduks[0]->Cara_KB}}</option>                 
+                @foreach ($kode_data_cara_kbs as $kode_data_cara_kb)
+                    <option value="{{ $kode_data_cara_kb->id }}">{{ $kode_data_cara_kb->cara_kb }}</option>
+                 @endforeach
+          </select><br><br>
           Hamil :<br>
           <input type="text" name="Hamil" value="{{$data_penduduks[0]->Hamil}}"><br><br>
           Tempat Mendapatkan Air Bersih :<br>

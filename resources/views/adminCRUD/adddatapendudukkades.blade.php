@@ -103,7 +103,12 @@
           </div>
           <div class="col-md-4">
           Akta Lahir :<br>
-          <input type="text" name="Akta_Lahir" placeholder="Akta Lahir"><br><br>
+          <select name="Akta_Lahir">
+            <option value="0" selected="true" >Akta Lahir</option>                 
+                @foreach ($kode_data_cakta_lahirs as $kode_data_cakta_lahir)
+                    <option value="{{ $kode_data_akta_lahir->id }}">{{ $kode_data_akta_lahir->akta_lahir }}</option>
+                 @endforeach
+          </select><br><br>
           Nomor Dokumen Paspor :<br>
           <input type="text" name="No_Paspor" placeholder="No Dokumen Paspor"><br><br>
           Tanggal akhir Paspor :<br>
@@ -123,23 +128,24 @@
           Tanggal Perceraian :<br>
           <input type="date" name="Tanggal_Perceraian" placeholder="Tanggal Perceraian"><br><br>
           Cacat :<br>
-          <input type="text" name="Cacat" placeholder="Cacat"><br><br>
+          <select name="Cacat">
+            <option value="0" selected="true" >Cacat</option>                 
+                @foreach ($kode_data_cacats as $kode_data_cacat)
+                    <option value="{{ $kode_data_cacat->id }}">{{ $kode_data_cacat->cacat }}</option>
+                 @endforeach
+          </select><br><br>
           Cara KB :<br>
           <select name="Cara_KB">
-               <option selected="true" >Cara KB</option>                 
-              <option value="Pil">Pil</option>
-              <option value="IUD">IUD</option>
-              <option value="Suntik">Suntik</option>
-              <option value="Kondom">Kondom</option>
-              <option value="Susuk KB">Susuk KB</option>
-              <option value="Sterilisasi Wanita">Sterilisasi Wanita</option>
-              <option value="Sterilisasi Pria">Sterilisasi Pria</option>
-               </select><br><br>
+            <option value="0" selected="true" >Cara KB</option>                 
+                @foreach ($kode_data_cara_kbs as $kode_data_cara_kb)
+                    <option value="{{ $kode_data_cara_kb->id }}">{{ $kode_data_cara_kb->cara_kb }}</option>
+                 @endforeach
+          </select><br><br>
           Hamil :<br>
           <input type="text" name="Hamil" placeholder="Hamil"><br><br>
           Tempat Mendapaykan Air Bersih :<br>
           <select name="tempat_mendapatkan_air_bersih">
-               <option selected="true" >Tempat Mendapatkan Air Bersih</option>                 
+               <option Value ="0" selected="true" >Tempat Mendapatkan Air Bersih</option>                 
                <option value="PAM">PAM</option>
                <option value="Sumur Gali">Sumur Gali</option>
                <option value="Penampungan air hujan">Penampungan air hujan</option>
@@ -152,7 +158,7 @@
                <option value="Air laut">Air laut</option>
           </select><br><br>
           Status Gizi Balita :<br>
-          <select name="status_gizi_balita">
+          <select value="0" name="status_gizi_balita">
                <option selected="true" >Status Gizi Balita</option>                 
                <option value="Baik">Baik</option>
                <option value="Buruk">Buruk</option>
@@ -160,7 +166,7 @@
                <option value="Lebih">Lebih</option>
           </select><br><br>
           Kebiasaan Berobat Bila Sakit :<br>
-          <select name="kebiasaan_berobat_bila_sakit">
+          <select value="0" name="kebiasaan_berobat_bila_sakit">
                <option selected="true" >Kebiasaan Berobat Bila Sakit</option>                 
                <option value="Dokter">Dokter</option>
                <option value="Dukun terlatih">Dukun terlatih</option>

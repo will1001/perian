@@ -151,7 +151,7 @@ function loadTabelDataPenduduk(data) {
         $('#Nama_Ayah'+j+'').append(this.Nama_Ayah);
         $('#Nama_Ibu'+j+'').append(this.Nama_Ibu);
         $('#Golongan_Darah'+j+'').append(this.golongan_darah);
-        $('#Akta_Lahir'+j+'').append(this.Akta_Lahir);
+        $('#Akta_Lahir'+j+'').append(this.akta_lahir);
         $('#No_Paspor'+j+'').append(this.No_Paspor);
         $('#Tanggal_akhir_Paspor'+j+'').append(this.Tanggal_akhir_Paspor);
         $('#No_KITAS'+j+'').append(this.No_KITAS);
@@ -161,8 +161,8 @@ function loadTabelDataPenduduk(data) {
         $('#Tanggal_Perkawinan'+j+'').append(this.Tanggal_Perkawinan);
         $('#No_Akta_Perceraian'+j+'').append(this.No_Akta_Perceraian);
         $('#Tanggal_Perceraian'+j+'').append(this.Tanggal_Perceraian);
-        $('#Cacat'+j+'').append(this.Cacat);
-        $('#Cara_KB'+j+'').append(this.Cara_KB);
+        $('#Cacat'+j+'').append(this.cacat);
+        $('#Cara_KB'+j+'').append(this.cara_kb);
         $('#Hamil'+j+'').append(this.Hamil);
         $('#Status_kependudukan'+j+'').append(this.Status_kependudukan);
         $('#Keterangan'+j+'').append(this.Keterangan);
