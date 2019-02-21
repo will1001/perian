@@ -3020,20 +3020,34 @@ public function adddatapendudukkadus(Request $request)
 
     public function updateumur()
     {
-        # code...
-            $kode_area_dusuns=kode_area_dusun::all();
+       //  # code...
+       //      $kode_area_dusuns=kode_area_dusun::all();
         
 
-       for($i=1;$i<=$kode_area_dusuns->count();$i++){
+       // for($i=1;$i<=$kode_area_dusuns->count();$i++){
             
-            $data_penduduks=data_penduduk::where('id_dusun',$i)->get();
+       //      $data_penduduks=data_penduduk::where('id_dusun',$i)->get();
+
+       //      foreach ($data_penduduks as $data_penduduk) {
+       //          # code...
+       //          $rumususia = Carbon\Carbon::now()->diffInDays($data_penduduk->Tanggal_Lahir, false);
+       //          $usia = (($rumususia/365)*-1);
+
+       //           data_penduduk::where('id_dusun',$i)->update([
+       //          'Usia' => floor($usia)            
+       //       ]);  
+       //      }
+       //  }
+
+
+            $data_penduduks=data_penduduk::all();
 
             foreach ($data_penduduks as $data_penduduk) {
                 # code...
                 $rumususia = Carbon\Carbon::now()->diffInDays($data_penduduk->Tanggal_Lahir, false);
                 $usia = (($rumususia/365)*-1);
 
-                 data_penduduk::where('id_dusun',$i)->update([
+                 data_penduduk::where('NIK',$data_penduduk->NIK)->update([
                 'Usia' => floor($usia)            
              ]);  
             }
