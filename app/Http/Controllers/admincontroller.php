@@ -3051,7 +3051,7 @@ public function adddatapendudukkadus(Request $request)
                 'Usia' => floor($usia)            
              ]);  
             }
-        }
+        
 
 
          return "succes";
