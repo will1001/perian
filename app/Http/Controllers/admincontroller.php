@@ -2875,6 +2875,8 @@ public function adddatapendudukkadus(Request $request)
             $rumususia = Carbon\Carbon::now()->diffInDays($data_penduduk[0]->Tanggal_Lahir, false);
             $usia = (($rumususia/365)*-1); 
 
+            
+
                
                 data_penduduk::where('NIK',$id)->update([
             'Alamat' => $request->Alamat,

@@ -136,6 +136,7 @@
                  <option selected="true" disabled="disabled">Cari Berdasarkan</option>
                   <option value="Nama">Nama</option>
                   <option value="NIK">NIK</option>
+                  <option value="Nomor_KK">Nomor KK</option>
                   <option value="Pendidikan">Pendidikan</option>
                   <option value="Status_Perkawinan">status Perkawinan</option>
                   <option value="Golongan_Darah">Golongan Darah</option>
